@@ -1,0 +1,26 @@
+public class Potion extends Item{
+    private int duration;
+    private int effect_point;
+    private String type;
+
+    public Potion(String name, int rank, int price, int duration, int effect_point, String type) {
+        super(name, rank, price);
+        this.duration = duration;
+        this.effect_point = effect_point;
+        this.type = type;
+    }
+
+    public String use(){
+        if(type.equals("Attack")){
+            return "Demage dealt by " + effect_point;
+        } else if (type.equals("Heal")) {
+            return "Healed by " + effect_point;
+        }else {
+            return "Invalid potion type";
+        }
+    }
+    @Override
+    public String effect() {
+        return use();
+    }
+}
