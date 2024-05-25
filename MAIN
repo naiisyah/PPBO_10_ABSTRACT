@@ -1,0 +1,15 @@
+public class Main {
+    public static void main(String[] args) {
+        Potion potionAttack = new Potion("Potion Attack", 1, 100, 10, 20, "Attack");
+        Potion potionHeal = new Potion("Potion Heal", 1, 100, 10, 20, "Heal");
+        Potion potionGraa = new Potion("Potion Graa", 1, 100, 10, 20, "Graa");
+        Sword sword = new Sword("Sword Damage", 2, 200, 30);
+        Shield shield = new Shield("Shield Defense", 3, 300, 40);
+
+        System.out.println(potionAttack.effect());
+        System.out.println(potionHeal.effect());
+        System.out.println(potionGraa.effect());
+        System.out.println(sword.effect());
+        System.out.println(shield.effect());
+    }
+}
