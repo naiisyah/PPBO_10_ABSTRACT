@@ -1,0 +1,16 @@
+public class Shield extends  Item{
+    private int damage_block;
+
+    public Shield(String name, int rank, int price, int damage_block) {
+        super(name, rank, price);
+        this.damage_block = damage_block;
+    }
+
+    public String defense(){
+        return "Demage Mitigate by " + damage_block;
+    }
+    @Override
+    public String effect() {
+        return defense();
+    }
+}
